@@ -15,6 +15,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+.tern-project
 
 # External tool builders
 .externalToolBuilders/
@@ -164,6 +165,8 @@ UpgradeLog*.htm
 # SQL Server files
 App_Data/*.mdf
 App_Data/*.ldf
+
+web.config
 
 #############
 ## Windows detritus
