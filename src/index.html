@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="emhApp" ng-controller="MainCtrl">
+<head>
+<title ng-bind="translation.TITLE"></title>
+<meta charset="utf-8">
+<meta name="description" content="{{translation.TITLE}}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="//cdn.knightlab.com/libs/timeline/latest/css/timeline.css" />
+<script src="js/vendor/modernizr.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/fastclick.js"></script>
+<script src="js/foundation.min.js"></script>
+
+<script type="text/javascript" src="//cdn.knightlab.com/libs/timeline/latest/js/timeline-min.js"></script>
+
+<script src="js/angular/angular.min.js"></script>
+<script src="js/angular/angular-cookies.min.js"></script> 
+<script src="js/angular/angular-resource.min.js"></script>
+
+<script src="js/app/services.js"></script>
+<script src="js/app/controllers.js"></script>
+<!-- <script src="js/app/app.js"></script> -->
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML elements-->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="off-canvas-wrap">
+		<div class="inner-wrap">
+			<nav class="tab-bar">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon"><span></span></a>
+				</section>
+
+				<section class="middle tab-bar-section">
+					<h1 class="title" ng-bind="translation.TITLE"></h1>
+				</section>
+<!--
+ <section class="top-bar-section">
+<ul class="right">
+  <li class="has-dropdown">
+	<a href="#">Langue</a>
+	<ul class="dropdown">
+	  <li><a href="#">Français</a></li>
+	</ul>
+  </li>
+</ul>
+ </section> 
+ -->
+			</nav>
+
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">
+					<li><label ng-bind="translation.OFF_CANVAS_GLOSSARY"></label></li>
+					<li><a href="#" ng-bind="translation.OFF_CANVAS_GLOSSARY_EM"></a></li>
+				</ul>
+				<ul class="off-canvas-list">
+					<li><label ng-bind="translation.OFF_CANVAS_REF"></label></li>
+					<li><a href="#" ng-bind="translation.OFF_CANVAS_REF_CREDITS"></a></li>
+				</ul>
+				<ul class="off-canvas-list">
+					<li><label ng-bind="translation.OFF_CANVAS_LNG"></label></li>
+					<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_EN" ng-click="setLang('en')"></a></li>
+					<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_FR" ng-click="setLang('fr')"></a></li>
+				</ul>				
+			</aside>
+
+			<section class="main-section">
+				<div id="timeline-embed" class="storyjs-embed full-embed"><div id="storyjs" style="position: relative;"></div></div>
+			</section>
+
+			<a class="exit-off-canvas"></a>
+		</div>
+	</div>
+
+<!--
+<nav class="top-bar" data-topbar data-options="is_hover: false">
+  <ul class="title-area">
+	<li class="name">
+	  <h1><a href="#">L'Histoire d'Euromaidan</a></h1>
+	</li>
+  </ul>
+  
+ <section class="top-bar-section">
+	<ul class="right">
+	  <li class="has-dropdown">
+		<a href="#">Langue</a>
+		<ul class="dropdown">
+		  <li><a href="#">Français</a></li>
+		</ul>
+	  </li>
+	</ul>
+  </section> 
+</nav>
+-->
+	<script type="text/javascript">
+	  $(document).foundation();
+	</script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48084900-1', 'emh.s3-website-eu-west-1.amazonaws.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
