@@ -6,5 +6,5 @@ angular.module('emhApp', [ 'emhApp.Services', 'emhApp.Directives' ])
 						function(error) { $log.error(error); });
 		};
 		
-		$rootScope.setTranslation('en'); // By default
+		$rootScope.setTranslation(emhTranslationService.getLanguage('en')); // By default
 	}]);
