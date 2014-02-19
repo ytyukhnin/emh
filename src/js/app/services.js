@@ -1,23 +1,29 @@
 angular.module('emhApp.Services', ['ngResource'])
-	.service('emhTranslationService', ['$resource', function($resource) {
+	.service('emhTranslationService', ['$resource', '$q', function($resource, $q) {
 	    return {
-		    	getTranslation : function(scope, language) {
+		    	getTranslation : function(language) {
+		    		var deferred = $q.defer();
 			        var path = 'translations/' + language + '.json';
 			        var lsid = 'emh_translations_' + language;
 			        if (localStorage) {
 			            if (localStorage.getItem(lsid)) {
-			            	scope.translation = JSON.parse(localStorage.getItem(lsid));
+			            	deferred.resolve(JSON.parse(localStorage.getItem(lsid)));
 			            } else {
 			                $resource(path).get(function(data) {
 			                    localStorage.setItem(lsid, JSON.stringify(data));
-			                    scope.translation = data;
-			                });
+			                    deferred.resolve(data);
+			                }, function(error) {
+				            	deferred.reject(error);
+				            });
 			            };
 			        } else {
 			            $resource(path).get(function(data) {
-			            	 scope.translation = data;
+			            	deferred.resolve(data);
+			            }, function(error) {
+			            	deferred.reject(error);
 			            });
 			        }
+			        return deferred.promise;
 		    	},
 		    	
 		    	getLanguage : function(defaultLanguage) {
@@ -41,5 +47,5 @@ angular.module('emhApp.Services', ['ngResource'])
 			        }
 			        return language;
 		    	}
-	    	}
+	    	};
 	}]);

@@ -6,29 +6,31 @@ angular.module('emhApp.Directives',[])
 	      restrict: 'EA',
 	      template : htmlTemplate,
 	      replace: true,
-	      scope: {},
+	      scope: {
+	    	  debug: '@'
+	      },
 	      link: function(scope, element, attrs) {
-	    	  	var timelineResize = function() { element.height($(window).height() - 50)};
+	    	  	var timelineResize = function() { element.height($(window).height() - 50); };
 	    	  	
 				var timelineConfig = {
-	//				version:	'2.24',
-					debug:		false,
-					type:		'timeline',
-					id:			'storyjs',
-					embed_id:	'timeline-embed',
-	//				embed:		true,
-	//				width:		'100%',
-	//				height:		'100%',
-					source: 	'data.json', // TODO: use emhTranslationService.getLanguage('en')
+	//				version:	   '2.24',
+					debug:		   scope.debug == "true",
+					type:		   'timeline',
+					id:			   'storyjs',
+					embed_id:	   'timeline-embed',
+	//				embed:		   true,
+	//				width:		   '100%',
+	//				height:		   '100%',
+					source: 	   'data.json', // TODO: use emhTranslationService.getLanguage('en')
 					hash_bookmark: true,
-					lang:		emhTranslationService.getLanguage('en'),
-	//				font:		'default',
+					lang:		   emhTranslationService.getLanguage('en'),
+	//				font:		   'default',
 	//				api_keys: {
-	//					google: "",
-	//					flickr: "",
-	//					twitter: ""
+	//					google:    '',
+	//					flickr:    '',
+	//					twitter:   ''
 	//				},
-	//				gmap_key: ""
+	//				gmap_key:      ''
 				};
 				VMM.debug = timelineConfig.debug;
 				var timeline = new VMM.Timeline(timelineConfig.id);

@@ -1,10 +1,10 @@
 angular.module('emhApp', [ 'emhApp.Services', 'emhApp.Directives' ])
-	.run(['$rootScope', 'emhTranslationService', function($rootScope, emhTranslationService) {
-		var setLanguage = function(language) {
-			emhTranslationService.getTranslation($rootScope,
-					emhTranslationService.setLanguage(language));
-		}
+	.run(['$rootScope', '$log', 'emhTranslationService', function($rootScope, $log, emhTranslationService) {
+		$rootScope.setTranslation = function(language) {
+			emhTranslationService.getTranslation(emhTranslationService.setLanguage(language))
+				.then(function(translation) { $rootScope.translation = translation; },
+						function(error) { $log.error(error); });
+		};
 		
-		setLanguage('en'); // By default
-		$rootScope.setLang = setLanguage;
+		$rootScope.setTranslation('en'); // By default
 	}]);

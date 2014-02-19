@@ -9,14 +9,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/css/foundation.min.css" />
 <link rel="stylesheet" href="//cdn.knightlab.com/libs/timeline/latest/css/timeline.css" />
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/vendor/modernizr.min.jss"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/vendor/modernizr.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/vendor/jquery.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/vendor/fastclick.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation.min.js"></script>
 <script type="text/javascript" src="//cdn.knightlab.com/libs/timeline/latest/js/timeline-min.js"></script>
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
-<!--<script type="text/javascript" src="js/angular/angular-cookies.min.js"></script> -->
+<!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-cookies.min.js"></script> -->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.min.js"></script>
 
 <script type="text/javascript" src="js/app/services.js"></script>
@@ -25,7 +25,7 @@
  
 <!-- HTML5 shim, for IE6-8 support of HTML elements-->
 <!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
 <body>
@@ -39,18 +39,6 @@
 				<section class="middle tab-bar-section">
 					<h1 class="title" ng-bind="translation.TITLE"></h1>
 				</section>
-<!--
- <section class="top-bar-section">
-<ul class="right">
-  <li class="has-dropdown">
-	<a href="#">Langue</a>
-	<ul class="dropdown">
-	  <li><a href="#">Français</a></li>
-	</ul>
-  </li>
-</ul>
- </section> 
- -->
 			</nav>
 
 			<aside class="left-off-canvas-menu">
@@ -64,39 +52,19 @@
 				</ul>
 				<ul class="off-canvas-list">
 					<li><label ng-bind="translation.OFF_CANVAS_LNG"></label></li>
-					<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_EN" ng-click="setLang('en')"></a></li>
-					<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_FR" ng-click="setLang('fr')"></a></li>
+					<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_EN" ng-click="setTranslation('en')"></a></li>
+					<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_FR" ng-click="setTranslation('fr')"></a></li>
 				</ul>				
 			</aside>
 
 			<section class="main-section">
-				<div timeline-js></div>
+				<div timeline-js debug="false"></div>
 			</section>
 
 			<a class="exit-off-canvas"></a>
 		</div>
 	</div>
 
-<!--
-<nav class="top-bar" data-topbar data-options="is_hover: false">
-  <ul class="title-area">
-	<li class="name">
-	  <h1><a href="#">L'Histoire d'Euromaidan</a></h1>
-	</li>
-  </ul>
-  
- <section class="top-bar-section">
-	<ul class="right">
-	  <li class="has-dropdown">
-		<a href="#">Langue</a>
-		<ul class="dropdown">
-		  <li><a href="#">Français</a></li>
-		</ul>
-	  </li>
-	</ul>
-  </section> 
-</nav>
--->
 	<script type="text/javascript">
 	  $(document).foundation();
 	</script>
