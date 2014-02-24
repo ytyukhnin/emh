@@ -150,6 +150,50 @@
                     "credit":"Фото Д.Діденко",
                     "caption":""
                 }
+            },
+            {
+                "startDate":"2014,02,18",
+                "headline":"Штурм Майдана",
+                "text":"",
+                "asset":
+                {
+                    "media":"http://www.youtube.com/watch?v=F7tHmkUBOXU",
+                    "credit":"Газета День",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2014,02,21",
+                "headline":"Події в м. Київі на вул. Інститутській",
+                "text":"",
+                "asset":
+                {
+                    "media":"http://www.youtube.com/watch?v=qSvj8F_Br4M",
+                    "credit":"Зелений Фронт",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2014,02,22",
+                "headline":"Небесна Сотня",
+                "text":"Слава Героям!",
+                "asset":
+                {
+                    "media":"http://www.youtube.com/watch?v=sINSTpBmCLo",
+                    "credit":"Бімба",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2014,02,22",
+                "headline":"Рада відправила Януковича у відставку. Голосування",
+                "text":"",
+                "asset":
+                {
+                    "media":"http://www.youtube.com/watch?v=IqFMZ8Z5pJI",
+                    "credit":"ВО Свобода",
+                    "caption":""
+                }
             }			
         ]
     }
