@@ -10,7 +10,7 @@ angular.module('emhApp.Directives',[])
 	    	  debug: '@'
 	      },
 	      link: function(scope, element, attrs) {
-	    	  	var timelineResize = function() { element.height($(window).height() - 50); };
+	    	  	var timelineResize = function() { element.height($(window).height() - 46); };
 	    	  	
 				var timelineConfig = {
 	//				version:	   '2.24',
@@ -22,7 +22,7 @@ angular.module('emhApp.Directives',[])
 	//				width:		   '100%',
 	//				height:		   '100%',
 					source: 	   'data.json', // TODO: use emhTranslationService.getLanguage('en')
-					hash_bookmark: true,
+					hash_bookmark: false,
 					lang:		   emhTranslationService.getLanguage('en'),
 	//				font:		   'default',
 	//				api_keys: {
