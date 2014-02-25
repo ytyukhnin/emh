@@ -12,7 +12,7 @@ angular.module('emhApp', [ 'ngRoute', 'emhApp.Services', 'emhApp.Directives' ])
                templateUrl: 'views/credits.html'
              }).
              when('/heavenly100', {
-                 templateUrl: 'views/glossary/heavenly100.html'
+                 templateUrl: 'views/sections/heavenly100.html'
              }).
              otherwise({
                redirectTo: '/'
