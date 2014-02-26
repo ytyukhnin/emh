@@ -15,7 +15,6 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/vendor/fastclick.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation.min.js"></script>
 <script type="text/javascript" src="//cdn.knightlab.com/libs/timeline/latest/js/timeline-min.js"></script>
-
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.min.js"></script>
@@ -35,9 +34,8 @@
 			<div class="inner-wrap">
 				<nav class="tab-bar">
 					<section class="left-small">
-						<a class="left-off-canvas-toggle menu-icon"><span></span></a>
+							<a class="left-off-canvas-toggle menu-icon"><span></span></a>
 					</section>
-	
 					<section class="right tab-bar-section">
 						<h1 class="title" ng-bind="translation.TITLE"></h1>
 					</section>
@@ -56,8 +54,8 @@
 					</ul>
 					<ul class="off-canvas-list">
 						<li><label ng-bind="translation.OFF_CANVAS_LNG"></label></li>
-						<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_EN" ng-click="setTranslation('en')"></a></li>
-						<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_FR" ng-click="setTranslation('fr')"></a></li>
+						<li><a href="javascript:void(0);" ng-bind="translation.OFF_CANVAS_LNG_EN" ng-click="setTranslation('en')"></a></li>
+						<li><a href="javascript:void(0);" ng-bind="translation.OFF_CANVAS_LNG_FR" ng-click="setTranslation('fr')"></a></li>
 					</ul>				
 				</aside>
 	
@@ -80,7 +78,6 @@
 	
 	  ga('create', 'UA-48084900-1', 'euromaidanchronicles.info');
 	  ga('send', 'pageview');
-	
 	</script>
 </body>
 </html>
