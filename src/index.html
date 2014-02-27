@@ -16,7 +16,6 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/vendor/fastclick.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/js/foundation.min.js"></script>
 <script type="text/javascript" src="//cdn.knightlab.com/libs/timeline/latest/js/timeline-min.js"></script>
-
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.min.js"></script>
@@ -38,7 +37,6 @@
 					<section class="left-small">
 						<a class="left-off-canvas-toggle menu-icon"><span></span></a>
 					</section>
-	
 					<section class="right tab-bar-section">
 						<h1 class="title" ng-bind="translation.TITLE"></h1>
 					</section>
@@ -46,9 +44,9 @@
 	
 				<aside class="left-off-canvas-menu">
 					<ul class="off-canvas-list">
-						<li><label ng-bind="translation.OFF_CANVAS_GLOSSARY"></label></li>
-						<li><a href="#/" ng-bind="translation.OFF_CANVAS_GLOSSARY_EM"></a></li>
-						<li><a href="#/heavenly100" ng-bind="translation.OFF_CANVAS_GLOSSARY_HEAVENLY_100"></a></li>
+						<li><label ng-bind="translation.OFF_CANVAS_SEC"></label></li>
+						<li><a href="#/" ng-bind="translation.OFF_CANVAS_SEC_EM"></a></li>
+						<li><a href="#/heavenly100" ng-bind="translation.OFF_CANVAS_SEC_HEAVENLY_100"></a></li>
 					</ul>
 					<ul class="off-canvas-list">
 						<li><label ng-bind="translation.OFF_CANVAS_REF"></label></li>
@@ -57,8 +55,8 @@
 					</ul>
 					<ul class="off-canvas-list">
 						<li><label ng-bind="translation.OFF_CANVAS_LNG"></label></li>
-						<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_EN" ng-click="setTranslation('en')"></a></li>
-						<li><a href="#" ng-bind="translation.OFF_CANVAS_LNG_FR" ng-click="setTranslation('fr')"></a></li>
+						<li><a href="javascript:void(0);" ng-bind="translation.OFF_CANVAS_LNG_EN" ng-click="setTranslation('en')"></a></li>
+						<li><a href="javascript:void(0);" ng-bind="translation.OFF_CANVAS_LNG_FR" ng-click="setTranslation('fr')"></a></li>
 					</ul>				
 				</aside>
 	
@@ -74,13 +72,13 @@
 	  $(document).foundation();
 	</script>
 	<script type="text/javascript">
-	 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 	
-	 ga('create', 'UA-48084900-1', 'emh.s3-website-eu-west-1.amazonaws.com');
-	 ga('send', 'pageview');
+	  ga('create', 'UA-48084900-1', 'euromaidanchronicles.info');
+	  ga('send', 'pageview');
 	</script>
 </body>
 </html>

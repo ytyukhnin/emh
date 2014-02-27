@@ -2,15 +2,24 @@ angular.module('emhApp.Services', ['ngResource'])
 	.service('emhTranslationService', ['$resource', '$q', function($resource, $q) {
 	    return {
 		    	getTranslation : function(language) {
-		    		var deferred = $q.defer();
+		    		var version = "201402162317"; // Current translations version
 			        var path = 'translations/' + language + '.json';
 			        var lsid = 'emh_translations_' + language;
+			        var verid = 'emh_translations_ver';
+			        var deferred = $q.defer();
+			        
 			        if (localStorage) {
-			            if (localStorage.getItem(lsid)) {
+			        	var readCached = true;
+			        	var storedVersion = localStorage.getItem(verid);
+			        	if(storedVersion && storedVersion != version) {
+			        		readCached = false;
+			        	}   	
+			            if (localStorage.getItem(lsid) && readCached) {
 			            	deferred.resolve(JSON.parse(localStorage.getItem(lsid)));
 			            } else {
 			                $resource(path).get(function(data) {
 			                    localStorage.setItem(lsid, JSON.stringify(data));
+			                    localStorage.setItem(verid, version);
 			                    deferred.resolve(data);
 			                }, function(error) {
 				            	deferred.reject(error);
