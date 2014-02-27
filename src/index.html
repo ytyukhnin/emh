@@ -34,7 +34,7 @@
 		<div class="off-canvas-wrap">
 			<div class="inner-wrap">
 				<nav class="tab-bar">
-					<section class="left-small">
+					<section id="jrFirstStop" class="left-small">
 						<a class="left-off-canvas-toggle menu-icon"><span></span></a>
 					</section>
 					<section class="right tab-bar-section">
@@ -68,9 +68,12 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-	  $(document).foundation();
-	</script>
+	<ol class="joyride-list" data-joyride>
+	  <li data-id="jrFirstStop" data-button="{{translation.JR_OK}}" data-options="tip_location: top;">
+		<h4 ng-bind="translation.TITLE"></h4>
+		<p ng-bind="translation.JR_TEXT"></p>
+	  </li>
+	</ol>
 	<script type="text/javascript">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

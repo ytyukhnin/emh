@@ -1,5 +1,7 @@
 {
   "TITLE": "The chronicles of Euromaidan",
+  "JR_OK": "Ok",
+  "JR_TEXT": "Click here for more options and navigation.",  
   "OFF_CANVAS_SEC" : "Sections",
   "OFF_CANVAS_SEC_EM" : "Euromaidan",
   "OFF_CANVAS_SEC_HEAVENLY_100": "Heavenly 100",
