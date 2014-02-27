@@ -15,7 +15,7 @@ angular.module('emhApp.Services', ['ngResource'])
 					return false;
 				}
 			}
-		}
+		};
 	})
 	.service('emhTranslationService', ['$resource', '$q', function($resource, $q) {
 	    return {
@@ -23,7 +23,7 @@ angular.module('emhApp.Services', ['ngResource'])
 		    		var version = "201402271821"; // Current translations version
 			        var path = 'translations/' + language + '.json';
 			        var lsid = 'emh_translations_' + language;
-			        var verid = 'emh_translations_ver';
+			        var verid = 'emh_translations_ver_' + language;
 			        var deferred = $q.defer();
 			        
 			        if (localStorage) {
