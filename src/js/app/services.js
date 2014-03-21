@@ -20,7 +20,7 @@ angular.module('emhApp.Services', ['ngResource'])
 	.service('emhTranslationService', ['$resource', '$q', function($resource, $q) {
 	    return {
 		    	getTranslation : function(language) {
-		    		var version = "201402271821"; // Current translations version
+		    		var version = "201403212312"; // Current translations version
 			        var path = 'translations/' + language + '.json';
 			        var lsid = 'emh_translations_' + language;
 			        var verid = 'emh_translations_ver_' + language;

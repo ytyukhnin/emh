@@ -7,7 +7,8 @@ angular.module('emhApp.Directives',[])
 	      template : htmlTemplate,
 	      replace: true,
 	      scope: {
-	    	  debug: '@'
+	    	  debug: '@',
+	    	  datafile: '@'
 	      },
 	      link: function(scope, element, attrs) {
 			var timelineResize = function() { element.height($(window).height() - 46); };
@@ -21,16 +22,10 @@ angular.module('emhApp.Directives',[])
 //				embed:		   true,
 //				width:		   '100%',
 //				height:		   '100%',
-				source: 	   'data.json', // TODO: use emhTranslationService.getLanguage('en')
+				source: 	   scope.datafile,
 				hash_bookmark: false,
 				lang:		   emhTranslationService.getLanguage('en'),
-//				font:		   'default',
-//				api_keys: {
-//					google:    '',
-//					flickr:    '',
-//					twitter:   ''
-//				},
-//				gmap_key:      ''
+//				font:		   'default'
 			};
 			VMM.debug = timelineConfig.debug;
 			var timeline = new VMM.Timeline(timelineConfig.id);
