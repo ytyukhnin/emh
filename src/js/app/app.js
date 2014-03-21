@@ -14,6 +14,11 @@ angular.module('emhApp', [ 'ngRoute', 'emhApp.Services', 'emhApp.Directives' ])
 			when('/heavenly100', {
 				templateUrl: 'views/sections/heavenly100.html'
             }).
+			when('/euromaidan/:date', {
+				templateUrl: function(routeParams) {
+					return 'views/euromaidan/'+routeParams.date+'.html';
+				}
+            }).
 			otherwise({
 				redirectTo: '/'
             });
