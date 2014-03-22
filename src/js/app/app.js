@@ -26,7 +26,11 @@ angular.module('emhApp', [ 'ngRoute', 'emhApp.Services', 'emhApp.Directives' ])
 				redirectTo: '/'
             });
 	}])
-	.run(['$rootScope', '$log', 'emhTranslationService', 'emhFirstRunService', function($rootScope, $log, emhTranslationService, emhFirstRunService) {
+	.run(['$rootScope', '$log', '$location', '$window', 'emhTranslationService', 'emhFirstRunService', function($rootScope, $log, $location, $window, emhTranslationService, emhFirstRunService) {
+		$rootScope.$on('$routeChangeSuccess', function(event) {
+		    $window.ga('send', 'pageview', { page: $location.path() });
+		});
+		
 		$rootScope.setTranslation = function(language) {
 			emhTranslationService.getTranslation(emhTranslationService.setLanguage(language))
 				.then(function(translation) { $rootScope.translation = translation; },
