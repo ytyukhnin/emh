@@ -56,6 +56,7 @@
 					</ul>
 					<ul class="off-canvas-list">
 						<li><label ng-bind="translation.OFF_CANVAS_LNG"></label></li>
+						<li><a href="javascript:void(0);" ng-bind="translation.OFF_CANVAS_LNG_UK" ng-click="setTranslation('uk')"></a></li>
 						<li><a href="javascript:void(0);" ng-bind="translation.OFF_CANVAS_LNG_EN" ng-click="setTranslation('en')"></a></li>
 						<li><a href="javascript:void(0);" ng-bind="translation.OFF_CANVAS_LNG_FR" ng-click="setTranslation('fr')"></a></li>
 					</ul>				
@@ -71,7 +72,6 @@
 	</div>
 	<ol class="joyride-list" data-joyride>
 	  <li data-id="jrFirstStop" data-button="{{translation.JR_OK}}" data-options="tip_location: top;">
-		<h4 ng-bind="translation.TITLE"></h4>
 		<p ng-bind="translation.JR_TEXT"></p>
 	  </li>
 	</ol>

@@ -37,7 +37,7 @@ angular.module('emhApp', [ 'ngRoute', 'emhApp.Services', 'emhApp.Directives' ])
 						function(error) { $log.error(error); });
 		};
 		
-		$rootScope.setTranslation(emhTranslationService.getLanguage('en')); // By default
+		$rootScope.setTranslation(emhTranslationService.getLanguage('uk')); // By default
 		
 		$(document).foundation();
 		if(emhFirstRunService.isFirstRun()) {

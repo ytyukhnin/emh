@@ -1,7 +1,7 @@
 {
   "TITLE": "The chronicles of Euromaidan",
   "JR_OK": "Ok",
-  "JR_TEXT": "Click here for more options and navigation.",  
+  "JR_TEXT": "Click here for more options and navigation",  
   "OFF_CANVAS_SEC" : "Sections",
   "OFF_CANVAS_SEC_EM" : "Euromaidan",
   "OFF_CANVAS_SEC_CRIMEA" : "Russian invasion in Crimea",
@@ -11,5 +11,6 @@
   "OFF_CANVAS_REF_ABOUT" : "About",
   "OFF_CANVAS_LNG" : "Language",
   "OFF_CANVAS_LNG_EN" : "English",
-  "OFF_CANVAS_LNG_FR" : "Français"
+  "OFF_CANVAS_LNG_FR" : "Français",
+  "OFF_CANVAS_LNG_UK" : "Українська"
 }

@@ -1,7 +1,7 @@
 {
   "TITLE": "Les chroniques d'Euromaïdan",
   "JR_OK": "Ok",
-  "JR_TEXT": "Cliquez ici pour plus d'options et navigation.",
+  "JR_TEXT": "Cliquez ici pour plus d'options et navigation",
   "OFF_CANVAS_SEC" : "Sections",
   "OFF_CANVAS_SEC_EM" : "Euromaïdan",
   "OFF_CANVAS_SEC_CRIMEA" : "L'invasion russe en Crimée",
@@ -11,5 +11,6 @@
   "OFF_CANVAS_REF_ABOUT" : "A propos",
   "OFF_CANVAS_LNG" : "Langue",
   "OFF_CANVAS_LNG_EN" : "English",
-  "OFF_CANVAS_LNG_FR" : "Français"
+  "OFF_CANVAS_LNG_FR" : "Français",
+  "OFF_CANVAS_LNG_UK" : "Українська"
 }
