@@ -32,6 +32,7 @@ angular.module('emhApp', [ 'ngRoute', 'emhApp.Services', 'emhApp.Directives' ])
 		});
 		
 		$rootScope.setTranslation = function(language) {
+			$rootScope.language = language;
 			emhTranslationService.getTranslation(emhTranslationService.setLanguage(language))
 				.then(function(translation) { $rootScope.translation = translation; },
 						function(error) { $log.error(error); });
