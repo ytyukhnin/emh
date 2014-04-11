@@ -1,6 +1,11 @@
 .off-canvas-wrap,.inner-wrap{
     height:100%;   
 }
+
 .page{
     height:100%;   
+}
+
+.video-background {
+	background: #1B1B1B;
 }
