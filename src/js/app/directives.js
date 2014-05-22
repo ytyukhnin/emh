@@ -19,6 +19,7 @@ angular.module('emhApp.Directives',[])
 				type:		   'timeline',
 				id:			   'storyjs',
 				embed_id:	   'timeline-embed',
+				start_zoom_adjust:  '-1',
 //				embed:		   true,
 //				width:		   '100%',
 //				height:		   '100%',
